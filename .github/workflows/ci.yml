@@ -7,13 +7,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Simple step
-        run: ls -la
-#      - uses: actions/checkout@v3
-#      - name: Set up JDK
-#        uses: actions/setup-java@v3
-#        with:
-#          java-version: '24'
-#          distribution: 'open-jdk'
-#      - name: Build with Maven
-#        run: ./mvwn clean package
+      - uses: actions/checkout@v3
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '24'
+          distribution: 'oracle'
+      - name: Build with Maven
+        run: ./mvwn clean package
